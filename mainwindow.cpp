@@ -222,7 +222,6 @@ void MainWindow::on_actionConfig_triggered()
 {
     Config * config = new Config(this);
     config->show();
-    delete config;
 }
 
 void MainWindow::on_actionTest_Thresh_triggered()
