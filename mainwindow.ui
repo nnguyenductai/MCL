@@ -531,30 +531,9 @@
        <property name="spacing">
         <number>6</number>
        </property>
-       <item row="3" column="0">
-        <widget class="QTextEdit" name="textEdit"/>
-       </item>
-       <item row="1" column="0">
-        <widget class="QFrame" name="frame__dk1">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>62</height>
-          </size>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item row="2" column="0">
+        <widget class="QWidget" name="widget" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -571,89 +550,140 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QLabel" name="label_Fpt">
-            <property name="minimumSize">
-             <size>
-              <width>130</width>
-              <height>0</height>
-             </size>
-            </property>
+           <widget class="QPushButton" name="pushButton_refes">
             <property name="maximumSize">
              <size>
-              <width>130</width>
+              <width>20</width>
               <height>16777215</height>
              </size>
             </property>
             <property name="font">
              <font>
-              <pointsize>11</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <family>Wingdings 3</family>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(165, 51, 51);
-color: rgb(255, 255, 255);</string>
-            </property>
             <property name="text">
-             <string>Ftp Stop</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <string>Q</string>
             </property>
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
+           <widget class="QComboBox" name="comboBox_listID"/>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="pushButton_checkpowermobi">
+            <property name="maximumSize">
+             <size>
+              <width>81</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Power(on/off)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <widget class="QFrame" name="frame_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 0);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QFrame" name="frame_11">
             <property name="minimumSize">
              <size>
-              <width>24</width>
-              <height>50</height>
+              <width>44</width>
+              <height>44</height>
              </size>
             </property>
-            <property name="text">
-             <string>Start</string>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
             </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QLabel" name="label_noteProcess_1">
+               <property name="text">
+                <string>Process 1:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_noteProcess_2">
+               <property name="text">
+                <string>Process 2:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_noteProcess_3">
+               <property name="text">
+                <string>Process 3:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_noteProcess_4">
+               <property name="text">
+                <string>Process 4:</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
-            <property name="minimumSize">
-             <size>
-              <width>24</width>
-              <height>50</height>
-             </size>
+           <widget class="QFrame" name="frame_12">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
             </property>
-            <property name="text">
-             <string>Stop</string>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
             </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="label_noteProcess_5">
+               <property name="text">
+                <string>Process 5:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_noteProcess_6">
+               <property name="text">
+                <string>Process 6:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_noteProcess_7">
+               <property name="text">
+                <string>Process 7:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_noteProcess_8">
+               <property name="text">
+                <string>Process 8:</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_4">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </widget>
@@ -785,9 +815,75 @@ color: rgb(255, 255, 255);</string>
          </layout>
         </widget>
        </item>
-       <item row="2" column="0">
-        <widget class="QWidget" name="widget" native="true">
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item row="3" column="0">
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_13">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
+          <property name="bottomMargin">
+           <number>2</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_home">
+            <property name="text">
+             <string>Home</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_back">
+            <property name="text">
+             <string>Back</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButton_restartApp">
+            <property name="text">
+             <string>Restart App</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QTextEdit" name="textEdit"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QFrame" name="frame__dk1">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>62</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -804,38 +900,89 @@ color: rgb(255, 255, 255);</string>
            <number>0</number>
           </property>
           <item>
-           <widget class="QPushButton" name="pushButton_refes">
+           <widget class="QLabel" name="label_Fpt">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
-              <width>20</width>
+              <width>130</width>
               <height>16777215</height>
              </size>
             </property>
             <property name="font">
              <font>
-              <family>Wingdings 3</family>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(165, 51, 51);
+color: rgb(255, 255, 255);</string>
+            </property>
             <property name="text">
-             <string>Q</string>
+             <string>Ftp Stop</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="comboBox_listID"/>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_checkpowermobi">
-            <property name="maximumSize">
+           <widget class="QPushButton" name="pushButton">
+            <property name="minimumSize">
              <size>
-              <width>81</width>
-              <height>16777215</height>
+              <width>24</width>
+              <height>50</height>
              </size>
             </property>
             <property name="text">
-             <string>Power(on/off)</string>
+             <string>Start</string>
             </property>
            </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="minimumSize">
+             <size>
+              <width>24</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Stop</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>

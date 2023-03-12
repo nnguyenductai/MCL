@@ -35,6 +35,7 @@ QList<QRect> CV::Template_Matching(cv::Mat matToFind,cv::Mat matTemplate,float t
         //std::cout<<("Mat template must be smaller than matInput");
         return listGeo;
     }
+    //matToFind = matToFind(Range(800,0),Range(1800,400));
     cv::Mat matToFindRGB = matToFind;
 
     cv::cvtColor(matToFind, matToFind, COLOR_BGR2GRAY);

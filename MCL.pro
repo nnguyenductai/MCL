@@ -5,8 +5,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11
 
 INCLUDEPATH+= C:/OpenCV4.1.1/MinGW7.3-x64/include
+#INCLUDEPATH+= C:\OpenCV4.1.1\OpenCV-3.4-CUDA\include
 LIBS+=C:/OpenCV4.1.1/MinGW7.3-x64/x64/mingw/bin/libopencv_*.dll
-
+#LIBS+=C:\OpenCV4.1.1\OpenCV-3.4-CUDA\x64\vc14\bin\opencv_*.dll
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -43,6 +44,7 @@ FORMS += \
     processwindows.ui \
     testthresh.ui
 
+win32:RC_ICONS += app.ico
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

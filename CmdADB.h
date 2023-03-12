@@ -17,7 +17,7 @@ public:
     void Tab(QString NameDevice, int x, int y);
     void Key(QString NameDevice, int code);
     void Swipe(QString NameDevice, int x, int y, int toX, int toY, int speed);
-    void StartApplication(QString NameDevice, QString NameApp);
+    void ReStartApplication(QString NameDevice, QString NameApp);
 
 signals:
 private:

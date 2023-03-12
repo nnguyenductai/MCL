@@ -9,7 +9,9 @@
 #include<QJsonObject>
 #include<QList>
 #include<QRect>
-
+#include "cv.h"
+#include "processwindows.h"
+#include"config.h"
 
 class MyThread : public QThread
 {
@@ -30,6 +32,10 @@ signals:
 private:
     void getJsonProcess(QJsonObject);
     int unsleep;
+    QList<cv::Mat> *List_matTemplate;
+    QStringList *listNameIcon;
+    ProcessWindows *processWD;
+    Config *config;
 };
 
 #endif // MYTHREAD_H

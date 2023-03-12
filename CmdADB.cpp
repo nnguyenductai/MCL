@@ -25,31 +25,32 @@ QList<QStringList> CmdADB::ReadListMobi()
 
     return lists;
 }
+
 void CmdADB::ScreenShoot(QString NameDevice)
 {
     ProcessWindows *prow = new ProcessWindows();
     QString command = "adb.exe -s "+NameDevice+" shell screencap -p /sdcard/"+prow->MD5(NameDevice)+".jpg";
-    qDebug()<<command;
+    //qDebug()<<command;
     executeCommand->start(command);
     executeCommand->waitForFinished(-1);
     QString output = executeCommand->readAllStandardOutput();
-    qDebug()<<output;
+    //qDebug()<<output;
 
     command = "adb.exe -s "+NameDevice+" pull -p /sdcard/"+prow->MD5(NameDevice)+".jpg "+prow->MD5(NameDevice)+".jpg";
-    qDebug()<<command;
+    //qDebug()<<command;
     executeCommand->start(command);
     executeCommand->waitForFinished(-1);
     output = executeCommand->readAllStandardOutput();
-    qDebug()<<output;
+    //qDebug()<<output;
 }
 void CmdADB::Tab(QString NameDevice, int x, int y)
 {
     QString command = "adb.exe -s "+NameDevice+" shell input tap "+QString::number(x)+" "+QString::number(y);
-    qDebug()<<command;
+    //qDebug()<<command;
     executeCommand->start(command);
     executeCommand->waitForFinished(-1);
     QString output = executeCommand->readAllStandardOutput();
-    qDebug()<<output;
+    //qDebug()<<output;
 }
 void CmdADB::Key(QString NameDevice, int code)
 {
@@ -57,7 +58,7 @@ void CmdADB::Key(QString NameDevice, int code)
     executeCommand->start(command);
     executeCommand->waitForFinished(-1);
     QString output = executeCommand->readAllStandardOutput();
-    qDebug()<<output;
+    //qDebug()<<output;
 }
 void CmdADB::Swipe(QString NameDevice, int x, int y, int toX, int toY, int speed)
 {
@@ -70,13 +71,18 @@ void CmdADB::Swipe(QString NameDevice, int x, int y, int toX, int toY, int speed
     executeCommand->start(command);
     executeCommand->waitForFinished(-1);
     QString output = executeCommand->readAllStandardOutput();
-    qDebug()<<output;
+    //qDebug()<<output;
 }
-void CmdADB::StartApplication(QString NameDevice, QString NameApp)
+void CmdADB::ReStartApplication(QString NameDevice, QString NameApp)
 {
-    QString command = "adb.exe -s "+NameDevice+" shell am start -n com.package."+NameApp+"/com.package."+NameApp+".ActivityName";
+    QString command = "adb.exe -s "+NameDevice+" shell am force-stop "+NameApp;
     executeCommand->start(command);
     executeCommand->waitForFinished(-1);
     QString output = executeCommand->readAllStandardOutput();
-    qDebug()<<output;
+    //qDebug()<<output;
+    command = "adb.exe -s "+NameDevice+" shell monkey -p "+NameApp+" -c android.intent.category.LAUNCHER 1";
+    executeCommand->start(command);
+    executeCommand->waitForFinished(-1);
+    output = executeCommand->readAllStandardOutput();
+    //qDebug()<<output;
 }

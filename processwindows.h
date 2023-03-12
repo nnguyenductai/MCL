@@ -15,6 +15,7 @@ public:
     explicit ProcessWindows(QWidget *parent = nullptr);
     ~ProcessWindows();
 
+    QByteArray CheckSha512(QString fileName);
     QString MD5(QString str);
     QRect getXY_WH(QString nameProcess);
     QPixmap ScreenShoot(QString nameProcess);

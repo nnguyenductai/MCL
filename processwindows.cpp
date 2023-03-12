@@ -18,8 +18,9 @@ ProcessWindows::ProcessWindows(QWidget *parent) :
 {
     ui->setupUi(this);
     this->filename_window = "SetupWindow.config";
-    this->loadfile();
     this->row = 1;
+    if(this->ListNameWindow.count()==0)
+        this->loadfile();
 }
 
 ProcessWindows::~ProcessWindows()
@@ -60,7 +61,17 @@ QString ProcessWindows::MD5(QString str)
     return QString(QCryptographicHash::hash((str.toUtf8())
                                                     ,QCryptographicHash::Md5).toHex());
 }
-
+QByteArray ProcessWindows::CheckSha512(QString fileName)
+{
+    QFile f(fileName);
+    if (f.open(QFile::ReadOnly)) {
+        QCryptographicHash hash(QCryptographicHash::Sha512);
+        if (hash.addData(&f)) {
+            return hash.result();
+        }
+    }
+    return QByteArray();
+}
 void ProcessWindows::on_listWidget_doubleClicked(const QModelIndex &index)
 {
     QListWidgetItem *LWItem =  ui->listWidget->item(index.row());
@@ -259,7 +270,7 @@ void ProcessWindows::loadfile()
             }
         }
     }
-    //qDebug()<<"PRO: "<<this->ListNameWindow;
+    qDebug()<<"load file PRO: "<<this->ListNameWindow;
     file.close();
 }
 
